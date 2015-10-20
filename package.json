@@ -15,7 +15,7 @@
     "serial"
   ],
   "dependencies" : {
-    serialport" : "=1.7.4"
+    "serialport" : "=1.7.4"
   },
   "devDependencies": {
     "nodeunit": ">=0.7.4"
