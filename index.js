@@ -1,4 +1,4 @@
-var SerialPort = require('serialport');
+var SerialPort = require('serialport').SerialPort;
 var Duplex = require('stream').Duplex;
 var EventEmitter = require('events').EventEmitter;
 var util = require('util');
