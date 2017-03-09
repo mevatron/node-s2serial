@@ -69,16 +69,6 @@ S2Serial.prototype.drain = function(callback) {
 	self._serialport.drain(callback);
 };
 
-S2Serial.prototype.pause = function() {
-	var self = this;
-	self._serialport.pause();
-};
-
-S2Serial.prototype.resume = function() {
-	var self = this;
-	self._serialport.resume();
-};
-
 S2Serial.prototype.set = function(options, callback) {
 	var self = this;
 	self._serialport.set(options, callback);
