@@ -1,4 +1,4 @@
-var SerialPort = require('serialport').SerialPort;
+var SerialPort = require('serialport');
 var Duplex = require('stream').Duplex;
 var EventEmitter = require('events').EventEmitter;
 var util = require('util');
@@ -39,12 +39,20 @@ function S2Serial(path, options) {
 		self.emit('close');
 	});
 
+	this._serialport.on('error', function(err) {
+		self.emit('error', err);
+	});
+
 	this.open = this._serialport.open;
-	this.close = this._serialport.close;
 	this.flush = this._serialport.flush;
 };
 
 util.inherits(S2Serial, Duplex);
+
+S2Serial.prototype.close = function(callback) {
+	var self = this;
+	self._seriaport.close(callback);
+}
 
 module.exports = {
 	S2Serial: S2Serial

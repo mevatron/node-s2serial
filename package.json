@@ -1,6 +1,6 @@
 {
   "name": "s2serial",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Streams2 frontend for node-serialport",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "serial"
   ],
   "dependencies" : {
-    "serialport" : "=1.7.4"
+    "serialport" : "=4.0.7"
   },
   "devDependencies": {
     "nodeunit": ">=0.7.4"
